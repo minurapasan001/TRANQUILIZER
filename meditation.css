@@ -1,0 +1,73 @@
+/* meditation.css */
+.meditation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .title {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .meditation-area {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 28px;
+    color: #4caf50;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 1.5s ease; /* Add transition for the animation */
+  }
+  
+  .timer-animation {
+    animation: fadeInOut 1.5s infinite;
+  }
+  
+  /* Animation for the timer count */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .start-button,
+  .stop-button,
+  .reset-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-button:hover,
+  .stop-button:hover,
+  .reset-button:hover {
+    background-color: #45a049;
+  }
+  
