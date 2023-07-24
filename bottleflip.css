@@ -1,0 +1,111 @@
+/* BottleFlip.css */
+.bottle-flip-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.bottle {
+  width: 100px;
+  height: 200px;
+  background-color: #f1c40f;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  animation: flipAnimation 2s ease-in-out;
+}
+
+.bottle-body {
+  width: 80px;
+  height: 160px;
+  background-color: #f1c40f;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+}
+
+.bottle-neck {
+  width: 20px;
+  height: 20px;
+  background-color: #f1c40f;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.bottle-cap {
+  width: 25px;
+  height: 10px;
+  background-color: #f1c40f;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.flipped {
+  animation: flipAnimationReverse 2s ease-in-out;
+}
+
+@keyframes flipAnimation {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes flipAnimationReverse {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(-360deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.flip-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.flip-button:hover {
+  background-color: #45a049;
+}
+
+.flipped-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 24px;
+  color: #333;
+  background-color: #72dfd2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
