@@ -1,0 +1,128 @@
+/* chromeextension.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.emotion-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.feeling-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.submit-yij {
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-yij:hover {
+  background-color: #45a049;
+}
+
+.emoji-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.emoji-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.emoji-wrappe {
+  display: flex;
+  align-items: center;
+  animation: fadeInScale 0.5s ease-in-out;
+}
+
+.selected-emji {
+  font-size: 48px;
+  margin-right: 10px;
+}
+
+.feeling-tex {
+  font-size: 18px;
+  color: #555;
+  animation: fadeInScale 0.5s ease-in-out;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .emotion-button {
+    flex-direction: column;
+  }
+
+  button {
+    margin: 5px 0;
+  }
+}
